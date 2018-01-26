@@ -16,7 +16,6 @@ ssh -q \
   photo-blog@104.131.68.88 \
   mkdir -p conf
 
-
 scp -q \
   -o UserKnownHostsFile=/dev/null \
   -o StrictHostKeyChecking=no \
@@ -37,11 +36,3 @@ scp -q \
   -o UserKnownHostsFile=/dev/null \
   -o StrictHostKeyChecking=no \
   docker-compose.yml photo-blog@104.131.68.88:
-
-echo "Starting server..."
-
-ssh -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  photo-blog@104.131.68.88 \
-  docker-compose up -d
