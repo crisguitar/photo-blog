@@ -8,3 +8,10 @@
   margin-top: 10px;
   margin-bottom: 35px;
 }
+
+@media only screen
+  and (min-width: 810px) {
+    main {
+        margin-top: 120px;
+    }
+  }
