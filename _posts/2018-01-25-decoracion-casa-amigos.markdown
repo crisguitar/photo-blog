@@ -5,7 +5,7 @@ date:   2018-01-25 09:55:14 +0100
 categories: photo
 image:
   url: /photos/decoracion-amigos.jpg
-  alt: Cypripedium Calceolum
-  title: Cypripedium Calceolum
+  alt: Decoración amigos
+  title: Decoración amigos
 ---
 Barcelona
