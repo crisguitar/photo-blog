@@ -10,7 +10,7 @@ ls -l
 echo "current directory"
 pwd
 
-docker run -w /code -v $(pwd):/code jekyll/jekyll bash -c "ls -l && jekyll build"
+docker run -w /code -v $(pwd):/code jekyll/jekyll bash -c "ls -l && bundle install"
 
 mkdir -p target
 
