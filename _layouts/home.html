@@ -5,10 +5,10 @@ layout: default
 <div class="catalogue">
   {% for post in site.posts %}
       <div class="post-entry">
-        <img src="{{ post.image.url }}"></img>
+        <img class="catalogue-image" src="{{ post.image.url }}"></img>
         <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
         <h2 class="catalogue-title">{{ post.title }}</h2>
-        <p>
+        <p class="catalogue-description">
           {{ post.content | truncatewords: 30 | strip_html }}
         </p>
 
