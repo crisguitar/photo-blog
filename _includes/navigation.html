@@ -1,0 +1,12 @@
+<nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
+  <h1 class="site-title">{{ site.title }}</h1>
+  <div id="nav-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="c-navigation__container u-container collapsible">
+    <a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Home</a>
+    <a class="c-navigation__item {% if page.url == '/archive/' %}is-active{% endif %}" href="{{ "/archive/" | prepend: site.baseurl }}">Archive</a>
+  </div>
+</nav>
