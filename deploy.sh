@@ -25,7 +25,7 @@ ssh -q \
   -o UserKnownHostsFile=/dev/null \
   -o StrictHostKeyChecking=no \
   photo-blog@104.131.68.88 \
-  tar -xvzf photo-blog.tar.gz -C site/
+  tar -xzf photo-blog.tar.gz -C site/
 
 scp -q \
   -o UserKnownHostsFile=/dev/null \
