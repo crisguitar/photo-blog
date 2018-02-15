@@ -17,7 +17,7 @@ layout: default
     {% endif %}
     <div class="column">
     {% for post in site.posts limit:per_column offset: offset%}
-      <img onclick="openModal(this);" class="gallery-entry" src="{{ post.image.url }}" style="width:100%"></img>
+      <img onclick="openModal(this);" class="gallery-entry" src="{{ post.image.url }}"></img>
     {% endfor %}
     </div>
     {% if offset < rest %}
