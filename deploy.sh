@@ -36,3 +36,14 @@ scp -q \
   -o UserKnownHostsFile=/dev/null \
   -o StrictHostKeyChecking=no \
   docker-compose.yml photo-blog@104.131.68.88:
+
+scp -q \
+  -o UserKnownHostsFile=/dev/null \
+  -o StrictHostKeyChecking=no \
+  start.sh photo-blog@104.131.68.88:
+
+ssh -q \
+  -o UserKnownHostsFile=/dev/null \
+  -o StrictHostKeyChecking=no \
+  photo-blog@104.131.68.88 \
+  sh start.sh
