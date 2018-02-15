@@ -4,49 +4,35 @@ set -eu
 
 username=$USER
 host=$HOST
+green="\033[0;32m"
+nc='\033[0m'
 
-echo "Deploying..."
+upload_file() {
+ file=$1
+ destination=$2
+ scp -q \
+   -o UserKnownHostsFile=/dev/null \
+   -o StrictHostKeyChecking=no \
+   $file $username@$host:$destination
+}
 
-ssh -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  $username@$host \
-  mkdir -p site
+run_remote_command() {
+  command=$1
+  ssh -q \
+    -o UserKnownHostsFile=/dev/null \
+    -o StrictHostKeyChecking=no \
+    $username@$host \
+    "${command}"
+}
 
-ssh -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  $username@$host \
-  mkdir -p conf
+echo "Uploading files ..."
+run_remote_command "mkdir -p deploy"
+upload_file target/photo-blog.tar.gz deploy
+upload_file conf/nginx.conf deploy
+upload_file bin/start.sh ""
+upload_file docker-compose.yml ""
+echo -e "Uploading files ... ${green}done"
 
-scp -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  target/photo-blog.tar.gz $username@$host:
-
-ssh -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  $username@$host \
-  tar -xzf photo-blog.tar.gz -C site/
-
-scp -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  conf/nginx.conf $username@$host:conf
-
-scp -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  docker-compose.yml $username@$host:
-
-scp -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  start.sh $username@$host:
-
-ssh -q \
-  -o UserKnownHostsFile=/dev/null \
-  -o StrictHostKeyChecking=no \
-  $username@$host \
-  sh start.sh
+echo "Deploying ..."
+run_remote_command "sh start.sh"
+echo -e "Deploying ... ${green}done"
