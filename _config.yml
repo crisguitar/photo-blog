@@ -27,10 +27,6 @@ defaults:
       path: "photos"
     values:
       image: true
-  - scope:
-      path: "thumbnails"
-    values:
-      image: true
 
 # Build settings
 markdown: kramdown
