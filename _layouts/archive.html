@@ -10,8 +10,8 @@ layout: default
 
 <div class="gallery row">
   {% for column in (1..columns) %}
-    {% if offset <= rest %}
-      {% assign per_column = rest %}
+    {% if offset < rest %}
+      {% assign per_column = per_column | plus: 1 %}
     {% else %}
       {% assign per_column = post_count | divided_by: columns %}
     {% endif %}
@@ -20,11 +20,8 @@ layout: default
       <img onclick="openModal(this);" class="gallery-entry" src="{{ post.image.url }}"></img>
     {% endfor %}
     </div>
-    {% if offset < rest %}
-      {% assign offset = offset | plus: rest %}
-    {% else %}
-      {% assign offset = offset | plus: per_column %}
-    {% endif %}
+    {% assign offset = offset | plus: per_column %}
+    {% assign per_column = post_count | divided_by: columns %}
   {% endfor %}
 </div>
 

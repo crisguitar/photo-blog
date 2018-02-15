@@ -1,0 +1,11 @@
+---
+layout: post
+title:  Away Day
+date:   2015-11-08 00:00:00 +0100
+categories: photo
+image:
+  url: /photos/away-day.jpg
+  alt: Away Day
+  title: Away Day
+---
+Porto Alegre - Brasil

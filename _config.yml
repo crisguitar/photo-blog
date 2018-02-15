@@ -50,8 +50,11 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - target/
+  - bin/
   - conf
   - deploy.sh
   - build.sh
   - docker-compose.yml
   - _compress_images_cache.yml
+  - start.sh
+  - create-post.sh

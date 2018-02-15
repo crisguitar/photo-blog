@@ -1,0 +1,12 @@
+---
+layout: post
+title:  Nina
+date:   2016-02-20 00:00:00 +0100
+categories: photo
+image:
+  url: /photos/nina.jpg
+  alt: Nina
+  title: Nina
+---
+La casa - Quito
+
