@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<!-- Photo gallery -->
-
 {% assign columns = 4 %}
 {% assign post_count = site.posts | size %}
 {% assign rest = post_count | modulo: columns %}
@@ -19,7 +17,7 @@ layout: default
     {% endif %}
     <div class="column">
     {% for post in site.posts limit:per_column offset: offset%}
-      <img src="{{ post.image.url }}" style="width:100%"></img>
+      <img onclick="openModal(this);" class="gallery-entry" src="{{ post.image.url }}" style="width:100%"></img>
     {% endfor %}
     </div>
     {% if offset < rest %}
@@ -28,4 +26,10 @@ layout: default
       {% assign offset = offset | plus: per_column %}
     {% endif %}
   {% endfor %}
+</div>
+
+<div id="gallery-modal" class="modal">
+  <span class="close" id="close-modal">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
 </div>
