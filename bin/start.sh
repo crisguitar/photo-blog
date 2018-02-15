@@ -13,11 +13,11 @@ rm -rf site
 rm -rf conf
 mkdir -p site
 mkdir -p conf
-echo -e "removing old files ... ${green}done"
+echo -e "removing old files ... ${green}done${nc}"
 
 echo "unpacking ..."
 tar -xzf deploy/photo-blog.tar.gz -C site/
 mv deploy/nginx.conf conf/nginx.conf
-echo -e "unpacking ... ${green}done"
+echo -e "unpacking ... ${green}done${nc}"
 
 docker-compose up -d

@@ -31,8 +31,8 @@ upload_file target/photo-blog.tar.gz deploy
 upload_file conf/nginx.conf deploy
 upload_file bin/start.sh ""
 upload_file docker-compose.yml ""
-echo -e "Uploading files ... ${green}done"
+echo -e "Uploading files ... ${green}done${nc}"
 
 echo "Deploying ..."
 run_remote_command "sh start.sh"
-echo -e "Deploying ... ${green}done"
+echo -e "Deploying ... ${green}done${nc}"
