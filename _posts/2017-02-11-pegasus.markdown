@@ -1,0 +1,12 @@
+---
+layout: post
+title:  Pegasus
+date:   2017-02-11 00:00:00 +0100
+categories: photo
+image:
+  url: /photos/salzburg.jpg
+  alt: Pegasus
+  title: Pegasus
+---
+Mirabell Gardens - Salzburg
+

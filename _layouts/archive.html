@@ -10,7 +10,7 @@ layout: default
 
 <div class="gallery row">
   {% for column in (1..columns) %}
-    {% if offset < rest %}
+    {% if rest > 0 %}
       {% assign per_column = per_column | plus: 1 %}
     {% else %}
       {% assign per_column = post_count | divided_by: columns %}
@@ -22,6 +22,7 @@ layout: default
     </div>
     {% assign offset = offset | plus: per_column %}
     {% assign per_column = post_count | divided_by: columns %}
+    {% assign rest = rest | minus: 1 %}
   {% endfor %}
 </div>
 
@@ -30,3 +31,5 @@ layout: default
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
+
+<script src="/js/modal.js"></script>
