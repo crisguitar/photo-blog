@@ -55,6 +55,7 @@ exclude:
   - deploy.sh
   - build.sh
   - docker-compose.yml
+  - docker-compose-local.yml
   - _compress_images_cache.yml
   - start.sh
   - create-post.sh
