@@ -7,6 +7,5 @@ image:
   url: /photos/people-toulouse.jpg
   alt: People having fun
   title: People having fun
+location: Toulouse - France
 ---
-Toulouse - France
-

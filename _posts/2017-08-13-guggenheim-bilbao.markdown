@@ -7,5 +7,5 @@ image:
   url: /photos/bilbao.jpg
   alt: 🕷 Bilbao
   title: 🕷 Bilbao
+location: Guggenheim - Bilbao
 ---
-Guggenheim - Bilbao

@@ -7,6 +7,5 @@ image:
   url: /photos/atardecer.jpg
   alt: Atardecer
   title: Atardecer
+location: Hyannis - Cape Cod
 ---
-Hyannis - Cape Cod
-

@@ -7,6 +7,5 @@ image:
   url: /photos/peniscola.jpg
   alt: Vista al Mediterraneo
   title: Vista al Mediterraneo
+location: Peníscola - Valencia
 ---
-Peníscola - Valencia
-

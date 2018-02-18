@@ -7,5 +7,5 @@ image:
   url: /photos/dragon-poblenou.jpg
   alt: Dragon Poblenou
   title: Dragon Poblenou
+location: El Poblenou - Barcelona
 ---
-El Poblenou - Barcelona

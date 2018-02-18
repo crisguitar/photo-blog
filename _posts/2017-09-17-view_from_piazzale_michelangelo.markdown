@@ -7,6 +7,5 @@ image:
   url: /photos/florencia.jpg
   alt: View from Piazzale Michelangelo
   title: View from Piazzale Michelangelo
+location: Florencia - Italia
 ---
-Florencia - Italia
-

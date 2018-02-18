@@ -7,5 +7,5 @@ image:
   url: /photos/drowned-gecko.jpg
   alt: Drowned gecko
   title: Drowned gecko
+location: Pune - India
 ---
-Pune - India

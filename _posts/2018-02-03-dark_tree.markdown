@@ -7,6 +7,5 @@ image:
   url: /photos/pals.jpg
   alt: Dark Tree
   title: Dark Tree
+location: Pals - Catalunya
 ---
-Pals - Catalunya
-

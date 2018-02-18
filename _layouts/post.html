@@ -1,0 +1,9 @@
+
+<div class="post-entry">
+  <img class="catalogue-image" src="{{ page.image.url }}"></img>
+  <time datetime="{{ page.date }}" class="catalogue-time">{{ page.date | date: "%B %d, %Y" }}</time>
+  <h2 class="catalogue-title">{{ page.title }}</h2>
+  <p class="catalogue-description">
+    {{ page.location }}
+  </p>
+</div>

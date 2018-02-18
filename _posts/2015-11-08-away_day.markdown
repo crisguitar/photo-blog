@@ -7,5 +7,5 @@ image:
   url: /photos/away-day.jpg
   alt: Away Day
   title: Away Day
+location: Porto Alegre - Brasil
 ---
-Porto Alegre - Brasil

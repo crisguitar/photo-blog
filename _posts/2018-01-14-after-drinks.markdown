@@ -7,5 +7,5 @@ image:
   url: /photos/after-drinks.jpg
   alt: After drinks
   title: After drinks
+location: At home - Barcelona
 ---
-At home - Barcelona

@@ -7,5 +7,5 @@ image:
   url: /photos/luz-artificial.jpg
   alt: Luz Artificial
   title: Luz Artificial
+location: Firebug - Barcelona
 ---
-Firebug - Barcelona

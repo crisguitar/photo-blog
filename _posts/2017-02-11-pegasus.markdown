@@ -7,6 +7,5 @@ image:
   url: /photos/salzburg.jpg
   alt: Pegasus
   title: Pegasus
+location: Mirabell Gardens - Salzburg
 ---
-Mirabell Gardens - Salzburg
-

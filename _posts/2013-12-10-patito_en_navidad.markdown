@@ -7,6 +7,5 @@ image:
   url: /photos/patito.jpg
   alt: Patito en Navidad
   title: Patito en Navidad
+location: Quito - Ecuador
 ---
-Quito - Ecuador
-

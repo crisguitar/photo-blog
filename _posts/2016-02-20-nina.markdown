@@ -7,6 +7,5 @@ image:
   url: /photos/nina.jpg
   alt: Nina
   title: Nina
+location: La casa - Quito
 ---
-La casa - Quito
-

@@ -7,6 +7,5 @@ image:
   url: /photos/ropa-venecia.jpg
   alt: Secando Ropa
   title: Secando Ropa
+location: Venecia - Italia
 ---
-Venecia - Italia
-

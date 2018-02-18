@@ -15,7 +15,7 @@ image:
   url: /photos/$post_image
   alt: $post_title
   title: $post_title
+location: $location
 ---
-$location
 
 EOF
