@@ -71,10 +71,8 @@ $(function() {
     var postURL = postURLs[index];
 
     $.get(postURL, function(data) {
-
-      $(".catalogue").append(data);
+      $(data).hide().appendTo(".catalogue").fadeIn(1000);
       callback();
-
     });
   }
 
