@@ -1,32 +1,28 @@
 $(function() {
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
   var postURLs,
   isFetchingPosts = false,
   shouldFetchPosts = true,
   postsToLoad = $(".catalogue").children().length,
   loadNewPostsThreshold = 100;
 
-  // Load the JSON file containing all URLs
   $.getJSON('/all-posts.json', function(data) {
     postURLs = data["posts"];
-
-    // If there aren't any more posts available to load than already visible, disable fetching
-    if (postURLs.length <= postsToLoad)
-    disableFetching();
+    loadPostIfNearBottom();
+    if (postURLs.length <= postsToLoad) {
+      disableFetching();
+    }
   });
 
   // If there's no spinner, it's not a page where posts should be fetched
   if ($(".infinite-spinner").length < 1)
   shouldFetchPosts = false;
 
-  // Are we close to the end of the page? If we are, load more posts
   $(window).scroll(function(e){
-
     if (!shouldFetchPosts || isFetchingPosts) return;
+    loadPostIfNearBottom();
+  });
+
+  function loadPostIfNearBottom() {
     var windowHeight = $(window).height(),
     windowScrollPosition = $(window).scrollTop(),
     bottomScrollPosition = windowHeight + windowScrollPosition,
@@ -36,7 +32,7 @@ $(function() {
     if ((documentHeight - loadNewPostsThreshold) < bottomScrollPosition) {
       fetchPosts();
     }
-  });
+  }
 
   // Fetch a chunk of posts
   function fetchPosts() {
