@@ -5,7 +5,7 @@ set -e
 echo "Packaging site..."
 rm -rf target
 
-bundle install && jekyll build
+bundle install && bundle exec jekyll build
 
 mkdir -p target
 
