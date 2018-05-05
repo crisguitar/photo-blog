@@ -7,6 +7,6 @@ image:
   url: /photos/flamenco-plaza.jpg
   alt: Baile Flamenco
   title: Baile Flamenco
-location: Plaza de Espana - Sevilla
+location: Plaza de España - Sevilla
 ---
 
