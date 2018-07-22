@@ -2,28 +2,10 @@
 layout: default
 ---
 
-{% assign columns = 4 %}
-{% assign post_count = site.posts | size %}
-{% assign rest = post_count | modulo: columns %}
-{% assign per_column = post_count | divided_by: columns %}
-{% assign offset = 0 %}
-
-<div class="gallery row">
-  {% for column in (1..columns) %}
-    {% if rest > 0 %}
-      {% assign per_column = per_column | plus: 1 %}
-    {% else %}
-      {% assign per_column = post_count | divided_by: columns %}
-    {% endif %}
-    <div class="column">
-    {% for post in site.posts limit:per_column offset: offset%}
-      <img onclick="openModal(this);" class="gallery-entry" src="{{ post.image.url }}"></img>
-    {% endfor %}
-    </div>
-    {% assign offset = offset | plus: per_column %}
-    {% assign per_column = post_count | divided_by: columns %}
-    {% assign rest = rest | minus: 1 %}
-  {% endfor %}
+<div class="gallery">
+{% for post in site.posts %}
+  <div class="item"><img onclick="openModal(this);" class="gallery-entry" src="{{ post.image.url }}"></img></div>
+{% endfor %}
 </div>
 
 <div id="gallery-modal" class="modal">
